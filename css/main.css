@@ -1,7 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @font-face {
 	font-family: 'quantum';
-	/* src: url('../font/Anurati-Regular.otf') format('truetype'); */
 	src: url('../font/Quantum.otf') format('truetype');
   }
 * {
@@ -16,33 +15,35 @@
 	/* --side-small: 26; */
 	/* --side-big: 36; */
 	/* --depth: 4000px; */
-	--depth: 3000px; /*Profundidad total del codigo*/
+	--depth: 4000px; /*Profundidad total del codigo*/
 	 /* --transition: .75s cubic-bezier(.075, .5, 0, 1);*/ /*Original*/
-	--transition: .85s cubic-bezier(.075, .5, 0, 1); /*Animación para hacer desvanecerse cuando llegan hacia delante*/
-	--morado: #8C52FF;
+	--transition: .75s cubic-bezier(.075, .5, 0, 1); /*Animación para hacer desvanecerse cuando llegan hacia delante*/
+	--morado: #E74384ff;
 	--blanco: #ffffff;
 	--negro: #000000;
 
-	--neon-color2: #ff00ff;
+	/* --neon-color2: #ff00ff; */
+	--neon-color2: #E74384ff;
 }
 body {
+	height: var(--depth);
 	background-color: var(--negro);
 	color: var(--blanco);
 	/* font-size: calc(var(--index) * .8); */
 	line-height: 1.75;
-	height: var(--depth);
 	/* padding: 0 5% ; */
 	/* font-weight: 300; */
 	scrollbar-width: none; /* Firefox */
 }
-body::-webkit-scrollbar { 
+body::-webkit-scrollbar { /*Barra lateral*/
 	display: none; /* Safari and Chrome */
 }
-.container {
+.gallery {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	perspective: 1400px;
+	/* perspective: 1400px; */ /*Original*/
+	perspective: 2000px;
 }
 header {
 	transform-style: preserve-3d;
@@ -88,19 +89,19 @@ h2, h3, h4 {
   @keyframes text-flicker {
 	0% {
 	  opacity: 0.1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	2% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	8% {
 	  opacity: 0.1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	9% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	12% {
 	  opacity: 0.1;
@@ -108,34 +109,34 @@ h2, h3, h4 {
 	}
 	20% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	25% {
 	  opacity: 0.3;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	30% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	70% {
 	  opacity: 0.7;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	72% {
 	  opacity: 0.2;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	77% {
 	  opacity: 0.9;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	100% {
 	  opacity: 0.9;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
   }
-  @keyframes border-flicker {
+  /* @keyframes border-flicker {
 	0% {
 	  opacity: 0.1;
 	  -webkit-box-shadow: 0px 0px 78px 4px var(--neon-color2);
@@ -172,47 +173,47 @@ h2, h3, h4 {
 	  -moz-box-shadow: 0px 0px 78px 4px var(--neon-color2);
 	  box-shadow: 0px 0px 78px 4px var(--neon-color2);
 	}
-  }
+  } */
   @keyframes letter-flicker {
 	0% {
 	  opacity: 0.1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	2% {
 	  opacity: 0.1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	4% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	19% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	21% {
 	  opacity: 0.1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	23% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	80% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	83% {
 	  opacity: 0.4;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
 	87% {
 	  opacity: 1;
-	  text-shadow: 0px 0px 29px var(--morado);
+	  text-shadow: 0px 0px 20px var(--morado);
 	}
   }
 
-.frame .frame__content .frame-media-isradev {
+.frame .frame__content .frame-media-netwave {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
@@ -228,7 +229,7 @@ h2, h3, h4 {
 .frame4 {
 	background-color: #f152ff;
 }
-/* Botón de sonido */
+/* Botón de sonido */ /*Botones por delante*/
 .soundbutton {
 	position: fixed;
 	bottom: 5vh;
