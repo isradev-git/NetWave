@@ -16,7 +16,7 @@ window.onscroll = function() {
 
 	frames.forEach(function(n, i) {
 		zVals.push((i * zSpacing) + zSpacing)
-		zVals[i] += delta * -5.5
+		zVals[i] += delta * -5 //5.5 original
 		let frame = frames[i],
 				transform = `translateZ(${zVals[i]}px)`,
 				opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
